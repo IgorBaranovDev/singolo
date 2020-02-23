@@ -232,10 +232,9 @@ button:focus {
   font-family: 'Lato-Light', sans-serif;
   font-size: 18px;
   color: #767e9e;
-  line-height: 27px;
   line-height: 30px;
-  letter-spacing: -0.013rem;
-  word-spacing: 2.7px;
+  letter-spacing: 0.001rem;
+  text-align: justify;
 }
 
 .sevices__cards {
@@ -261,7 +260,7 @@ button:focus {
 .description__title {
   font-family: 'Lato-Black', sans-serif;
   font-size: 18px;
-  line-height: 0.992;
+  letter-spacing: 0.002em;
   color: #666d89;
 }
 
@@ -271,7 +270,7 @@ button:focus {
   font-family: 'Lato-Regular', sans-serif;
   text-align: justify;
   color: #666d89;
-  letter-spacing: -0.009rem;
+  letter-spacing: -0.001rem;
   margin-top: -10px;
 }
 
@@ -288,7 +287,8 @@ button:focus {
 .item__description {
   position: absolute;
   left: 80px;
-  top: 28px;
+  top: 25px;
+
   width: 220px;
   height: 110px;
   overflow: hidden;
