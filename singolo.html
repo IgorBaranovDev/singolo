@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Singolo</title>
+  <link rel="stylesheet" href="./singolo.css">
+  <link rel="stylesheet" href="./fonts.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header header_theme">
+    <div class="header__logo">
+      <h1 class="display-none">singolo</h1>
+      <a href="#" class="logo logo_theme" title="Singolo">singolo<span>*</span></a>
+    </div>
+    <nav class="header__navigation">
+      <ul class="navigation">
+        <li class="navigation__item">
+          <a href="#" class="header_link header_link-theme">home</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="header_link header_link-theme">services</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="header_link header_link-theme">portfolio</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="header_link header_link-theme">about</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="header_link header_link-theme">contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main main_theme">
+    <section class="main__slider slider slider__theme">
+      <button class="slider__button button button_theme_left">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="27px">
+          <image x="0px" y="0px" width="16px" height="27px"
+            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAbCAMAAABC6v+QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAzFBMVEXKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUn///8s0/OlAAAAQnRSTlMAAnvOyGShUIyfiXeFxhJy1Bdz2CPXJFv65yxY/Og1R/Q2QvHzQ9PqS/ePyjFB8jxMXOZd++IlbtnVFnWai2q5sVMmtg3NAAAAAWJLR0RDZ9ANYgAAAAd0SU1FB+QCFA4TFwwYicMAAACtSURBVBjTVdHXFoIwDIDhiuLeA0HU4t57b+X9H0pJQlp79/3nFNJWCF4RIxozhbbi/m8llJOB/RQ7DfYzobPoXJ5cQBdL5DK6UiWb6JpFrttgp0F2m+BWmyw9dIfc7YH7g3CAIXg05gknEKbqCDMInsth7mBRexb41aUqkv6z4rK2/ycRYoNlq8puD+Vw5HLC854tLnQjlyuXGxZDjYy3fNfe5REEqb/U8/X+iC/ClSx5CbNV2wAAAABJRU5ErkJggg==" />
+        </svg>
+      </button>
+      <div class="slider__container container">
+        <div class="container__iphone iphone iphone_vertical">
+          <img src="./assets/img/iphone-vertical.png" alt="iphone">
+        </div>
+        <div class="container__iphone iphone iphone_gorizontal">
+          <img src="./assets/img/iphone-horizontal.png" alt="iphone">
+        </div>
+      </div>
+      <button class="slider__button button button_theme_right">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="27px">
+          <image x="0px" y="0px" width="16px" height="27px"
+            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAbCAMAAABC6v+QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAzFBMVEXKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUn///8s0/OlAAAAQnRSTlMAZMjOewJQoZ+Md4kSxoUX1HIj2HMk1yzn+ls16PxYNvRHQ/PxQkvq04/3yjHyQTxM5lwl4vtd2W4W1XWai1OxuWofSiN1AAAAAWJLR0RDZ9ANYgAAAAd0SU1FB+QCFA4UEjMz64sAAACpSURBVBjTXdFXFoMgEEBRTEzvXVNU0nvvPex/UYkzMBj5e/ccYUDGjEjUjDG94uK3EgFI+iBSGtIAIkOQzaHkSQpFlBJJuYJSJanVUQyShgVgN0labZCOQ+KieJyk2wPpD0iGI5CxHnkCMKV2PIAZfYFtzVUvcM+l7JU8g/9PYa9Vb7C3snd76MNR3fWEdz3LvlxDr2Fi32jCe+iNGff7Efgv7Pl6fwL5BeaaLHgTj+sMAAAAAElFTkSuQmCC" />
+        </svg>
+      </button>
+    </section>
+    <section class="main__sevices services">
+      <h2 class="services__title title_theme">Our Services</h2>
+      <p class="services__text text_theme">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
+        mollis, non commodo luctus, nisi erat porttitor<br>ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus
+        ac cursus commodo, tortor mauris condimentum nibh.
+      </p>
+      <div class="sevices__cards cards_theme">
+        <div class="cards__item">
+          <div class="item__image">
+            <img src="./assets/img/servise-full-pen.png" class="image__centre" alt="pen">
+          </div>
+          <div class="item__description">
+            <h3 class="description__title">Custom Design</h3>
+            <p class="description__text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet,
+              viverra lacus ut, ultrices velit.</p>
+          </div>
+        </div>
+        <div class="cards__item">
+          <div class="item__image">
+            <img src="./assets/img/servise-full-bulb.png" class="image__centre" alt="bulb">
+          </div>
+          <div class="item__description">
+            <h3 class="description__title">Inovative Ideas</h3>
+            <p class="description__text">Quisque luctus, quam eget molestie com-modo, lacus purus cursus purus,
+              nec rutrum tellus dolor id lorem.</p>
+          </div>
+        </div>
+        <div class="cards__item">
+          <div class="item__image">
+            <img src="./assets/img/servise-full-heart.png" class="image__centre" alt="heart">
+          </div>
+          <div class="item__description">
+            <h3 class="description__title">Love Is The Answer</h3>
+            <p class="description__text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et
+              consequat
+              felis. Quisque condimentum.</p>
+          </div>
+        </div>
+        <div class="cards__item">
+          <div class="item__image">
+            <img src="./assets/img/servise-full-phone.png" class="image__centre" alt="phone">
+          </div>
+          <div class="item__description">
+            <h3 class="description__title">Responsive Layout</h3>
+            <p class="description__text">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc
+              ligula. Prae-sent elit leo.</p>
+          </div>
+        </div>
+        <div class="cards__item">
+          <div class="item__image">
+            <img src="./assets/img/servise-full-bubble.png" class="image__centre" alt="bubble">
+          </div>
+          <div class="item__description">
+            <h3 class="description__title">24 / 7 Support</h3>
+            <p class="description__text">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat.
+              Pellen-tesque egestas venenatis lorem .</p>
+          </div>
+        </div>
+        <div class="cards__item">
+          <div class="item__image">
+            <img src="./assets/img/servise-full-star.png" class="image__centre" alt="star">
+          </div>
+          <div class="item__description">
+            <h3 class="description__title">Feel Like A Star</h3>
+            <p class="description__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce
+              vitae aliquam tellus.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="main__portfolio portfolio">
+      <h2 class="portfolio__title_header title_header">Portfolio</h2>
+      <p class="portfolio__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
+        nec elit.</p>
+      <nav class="portfolio__selectWork selectWork">
+        <button class="selectWork_item">all</button>
+        <button class="selectWork_item">web design</button>
+        <button class="selectWork_item">graphic design</button>
+        <button class="selectWork_item">artwork</button>
+      </nav>
+      <div class="portfolio__projects">
+        <div class="projects__item"><img class="image_project_1" src="./assets/img/projects/image-01.png" alt="work">
+        </div>
+        <div class="projects__item"><img class="image_project_2" src="./assets/img/projects/image-02.png" alt="work">
+        </div>
+        <div class="projects__item"><img class="image_project_3" src="./assets/img/projects/image-03.png" alt="work">
+        </div>
+        <div class="projects__item"><img class="image_project_4" src="./assets/img/projects/image-04.png" alt="work">
+        </div>
+        <div class="projects__item"><img class="image_project_5" src="./assets/img/projects/image-05.png" alt="work">
+        </div>
+        <div class="projects__item"><img class="image_project_6" src="./assets/img/projects/image-06.png" alt="work">
+        </div>
+        <div class="projects__item"><img class="image_project_7" src="./assets/img/projects/image-07.png" alt="work">
+        </div>
+        <div class="projects__item"><img class="image_project_8" src="./assets/img/projects/image-08.png" alt="work">
+        </div>
+        <div class="projects__item"><img class="image_project_9" src="./assets/img/projects/image-09.png" alt="work">
+        </div>
+        <div class="projects__item"><img class="image_project_10" src="./assets/img/projects/image-10.png" alt="work">
+        </div>
+        <div class="projects__item"><img class="image_project_11" src="./assets/img/projects/image-11.png" alt="work">
+        </div>
+        <div class="projects__item"><img class="image_project_12" src="./assets/img/projects/image-12.png" alt="work">
+        </div>
+      </div>
+    </section>
+    <section class="main__about_as about_as">
+      <h2 class="about_as__title_about_as title_about_as">About Us</h2>
+      <p class="about_as__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
+        commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus
+        commodo, tortor mauris condimentum nibh..</p>
+      <div class="about_as__cards cards">
+        <div class="card">
+          <img src="./assets/img/about_as/photo-01.png" alt="photo">
+          <h3 class="card_name">Adam Jensen</h3>
+          <p class="card_bio">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus
+            dolor id lorem.</p>
+          <div class="card__social_links">
+            <a href="#" class="social_link link_facebook"></a>
+            <a href="#" class="social_link link_google"></a>
+            <a href="#" class="social_link link_twitter"></a>
+            <a href="#" class="social_link link_linkedin"></a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./assets/img/about_as/photo-02.png" alt="photo">
+          <h3 class="card_name">Desmond Miles</h3>
+          <p class="card_bio">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus
+            ut, ultrices velit.</p>
+          <div class="card__social_links">
+            <a href="#" class="social_link link_facebook"></a>
+            <a href="#" class="social_link link_google"></a>
+            <a href="#" class="social_link link_twitter"></a>
+            <a href="#" class="social_link link_linkedin"></a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./assets/img/about_as/photo-03.png" alt="photo">
+          <h3 class="card_name">Scolara Visari</h3>
+          <p class="card_bio">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
+            Quisque condimentum.</p>
+          <div class="card__social_links">
+            <a href="#" class="social_link link_facebook"></a>
+            <a href="#" class="social_link link_google"></a>
+            <a href="#" class="social_link link_twitter"></a>
+            <a href="#" class="social_link link_linkedin"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main__get-a-quote get-a-quote">
+      <h2 class="get-a-quote__title_header title_header">Get a Quote</h2>
+      <p class="get-a-quote__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
+        commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus
+        commodo, tortor mauris condimentum nibh.</p>
+      <div class="get-a-quote__contact-information">
+        <div class="contact-information__form">
+          <form action="#" method="POST" class="get-a-quote__form form" id="form">
+            <input class="form__input_name" type="text" name="name" placeholder="Name (Required)" required>
+            <input class="form__input_email" type="email" name="email" placeholder="Email (Required)" required>
+            <input class="form__input_subject" type="text" name="subject" placeholder="Subject">
+            <textarea class="form__textarea" name="describe" placeholder="Describe your project in detail..." cols="40"
+              rows="10"></textarea>
+            <input class="form__submit" type="submit" value="SEND">
+          </form>
+        </div>
+        <div class="contact-information__contacts">
+          <h3 class="contacts_title">Contact Information</h3>
+          <p class="contacts_info">Quisque hendrerit purus dapibus, ornare nibh vitae,viver-<br>ra nibh. Fusce vitae
+            aliquam
+            tellus. Proin sit
+            amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
+          </p>
+          <div class="contacts_links">
+            <a href="#" class="link_location">Elm St. 14/05 Lost City</a><br>
+            <a href="tel: 03528 331 86 35" class="link_tel">03528 331 86 35</a><br>
+            <a href="mailto: info@singolo.com" class="link_mail">info@singolo.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer footer_theme">
+    <p class="footer__copyright"> © Copyright 2013</p>
+    <div class="footer__social_links card__social_links">
+      <a href="#" class="social_link link_facebook"></a>
+      <a href="#" class="social_link link_google"></a>
+      <a href="#" class="social_link link_twitter"></a>
+      <a href="#" class="social_link link_linkedin"></a>
+    </div>
+  </footer>
+</body>
+
+</html>
