@@ -117,10 +117,14 @@ body {
   background: #414552;
 }
 
-.header_link:focus,
 .header_link:hover {
   color: #f06c64;
   cursor: pointer;
+}
+
+.header_link_active {
+  color: #dcdd78;
+  font-size: 14px;
 }
 
 .main_theme,
