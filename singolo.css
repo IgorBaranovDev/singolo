@@ -347,7 +347,7 @@ button:focus {
 
 .selectWork_item:hover,
 .selectWork_item:active {
-  color: #c5c5c5;
+  color: #dedede;
   border-color: #c5c5c5;
 }
 
