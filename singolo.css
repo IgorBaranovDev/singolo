@@ -191,10 +191,64 @@ button:focus {
   left: 112px;
 }
 
-.iphone_gorizontal {
+.iphone_vertical_base {
+  position: absolute;
+  right: -240px;
+  top: 1px;
+  z-index: 2;
+}
+
+.iphone_vertical_base_bg-black {
+  position: absolute;
+  right: -205px;
+  top: 62px;
+  z-index: 3;
+}
+
+.iphone_vertical_bg-img {
+  cursor: pointer;
+  position: absolute;
+  right: -205px;
+  top: 62px;
+  z-index: 5;
+}
+
+.iphone_vertical_batton {
+  cursor: pointer;
+  position: absolute;
+  right: -129px;
+  top: 408px;
+  z-index: 5;
+}
+
+.iphone_gorizontal_base {
   position: absolute;
   right: 111px;
   top: 174px;
+  z-index: 2;
+}
+
+.iphone_gorizontal_base_bg-black {
+  position: absolute;
+  right: 199px;
+  top: 185px;
+  z-index: 3;
+}
+
+.iphone_gorizontal_bg-img {
+  cursor: pointer;
+  position: absolute;
+  right: 199px;
+  top: 185px;
+  z-index: 5;
+}
+
+.iphone_gorizontal_batton {
+  cursor: pointer;
+  position: absolute;
+  right: 544px;
+  top: 260px;
+  z-index: 5;
 }
 
 .services {
