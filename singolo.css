@@ -348,7 +348,11 @@ button:focus {
 .selectWork_item:hover,
 .selectWork_item:active {
   color: #dedede;
+<<<<<<< HEAD
   border-color: #dedede;
+=======
+  border-color: #c5c5c5;
+>>>>>>> f4ca4595d6b36c126fb5c140fc5a92313852cb87
 }
 
 .portfolio__projects {
