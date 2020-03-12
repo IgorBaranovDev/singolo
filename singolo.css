@@ -414,22 +414,24 @@ button:focus {
   width: 940px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
+  -ms-grid-columns: 1fr 18px 1fr 18px 1fr 18px 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 20px 1fr 20px 1fr;
+  -ms-grid-rows: 1fr 18px 1fr 18px 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  -webkit-column-gap: 20px;
-  -moz-column-gap: 20px;
-  column-gap: 20px;
-  row-gap: 20px;
+  -webkit-column-gap: 18px;
+  -moz-column-gap: 18px;
+  column-gap: 18px;
+  row-gap: 18px;
   margin: 17px auto;
   overflow: hidden;
 }
 
 .projects__item {
+  position: relative;
   overflow: hidden;
-  width: 223px;
-  height: 190px;
+  width: 220px;
+  height: 187px;
+  z-index: 9999;
 }
 
 .image_project_1:hover,
@@ -454,6 +456,12 @@ button:focus {
   transform: scale(1.2);
 }
 
+.item-active {
+  width: 210px;
+  height: 177px;
+  border: 5px solid #f06c64;
+}
+
 .image_project_1 {
   display: block;
   -webkit-transform: translate(-8px, -10px);
@@ -470,6 +478,7 @@ button:focus {
 
 .image_project_3 {
   display: block;
+  z-index: 8;
   -webkit-transform: translate(-11px, 0px);
   -ms-transform: translate(-11px, 0px);
   transform: translate(-11px, 0px);

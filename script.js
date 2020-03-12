@@ -7,6 +7,7 @@ const iphoneHorizontButton = document.getElementById(
 );
 const iphoneVertical = document.getElementById('iphone-vertical');
 const iphoneVerticalButton = document.getElementById('button-vertical-iphone');
+const projects = document.getElementById('projects');
 
 navigationLinks.addEventListener('click', event => {
   navigationLinks
@@ -33,4 +34,11 @@ iphoneHorizontButton.addEventListener('click', () => {
 
 iphoneVerticalButton.addEventListener('click', () => {
   iphoneVertical.children[2].style = 'z-index: 3';
+});
+
+projects.addEventListener('click', () => {
+  projects
+    .querySelectorAll('div')
+    .forEach(element => element.classList.remove('item-active'));
+  event.path[1].classList.add('item-active');
 });
