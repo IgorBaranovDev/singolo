@@ -40,7 +40,7 @@
   </header>
   <main class="main main_theme">
     <section class="main__slider slider slider__theme">
-      <button class="slider__button button button_theme_left" id="left-arrow">
+      <button class="slider__arrow arrow arrow_theme_left" id="left-arrow">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="27px">
           <image x="0px" y="0px" width="16px" height="27px"
             xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAbCAMAAABC6v+QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAzFBMVEXKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUn///8s0/OlAAAAQnRSTlMAAnvOyGShUIyfiXeFxhJy1Bdz2CPXJFv65yxY/Og1R/Q2QvHzQ9PqS/ePyjFB8jxMXOZd++IlbtnVFnWai2q5sVMmtg3NAAAAAWJLR0RDZ9ANYgAAAAd0SU1FB+QCFA4TFwwYicMAAACtSURBVBjTVdHXFoIwDIDhiuLeA0HU4t57b+X9H0pJQlp79/3nFNJWCF4RIxozhbbi/m8llJOB/RQ7DfYzobPoXJ5cQBdL5DK6UiWb6JpFrttgp0F2m+BWmyw9dIfc7YH7g3CAIXg05gknEKbqCDMInsth7mBRexb41aUqkv6z4rK2/ycRYoNlq8puD+Vw5HLC854tLnQjlyuXGxZDjYy3fNfe5REEqb/U8/X+iC/ClSx5CbNV2wAAAABJRU5ErkJggg==" />
@@ -64,7 +64,7 @@
             src="./assets/img/slider/button-iphone.png" alt="batton">
         </div>
       </div>
-      <button class="slider__button button button_theme_right" id="right-arrow">
+      <button class="slider__arrow arrow arrow_theme_right" id="right-arrow">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="27px">
           <image x="0px" y="0px" width="16px" height="27px"
             xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAbCAMAAABC6v+QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAzFBMVEXKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUnKRUn///8s0/OlAAAAQnRSTlMAZMjOewJQoZ+Md4kSxoUX1HIj2HMk1yzn+ls16PxYNvRHQ/PxQkvq04/3yjHyQTxM5lwl4vtd2W4W1XWai1OxuWofSiN1AAAAAWJLR0RDZ9ANYgAAAAd0SU1FB+QCFA4UEjMz64sAAACpSURBVBjTXdFXFoMgEEBRTEzvXVNU0nvvPex/UYkzMBj5e/ccYUDGjEjUjDG94uK3EgFI+iBSGtIAIkOQzaHkSQpFlBJJuYJSJanVUQyShgVgN0labZCOQ+KieJyk2wPpD0iGI5CxHnkCMKV2PIAZfYFtzVUvcM+l7JU8g/9PYa9Vb7C3snd76MNR3fWEdz3LvlxDr2Fi32jCe+iNGff7Efgv7Pl6fwL5BeaaLHgTj+sMAAAAAElFTkSuQmCC" />
@@ -144,39 +144,51 @@
     </section>
     <section class="main__portfolio portfolio" id="portfolio">
       <h2 class="portfolio__title_header title_header">Portfolio</h2>
-      <p class="portfolio__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
+      <p class="portfolio__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
+        sem
         nec elit.</p>
-      <nav class="portfolio__selectWork selectWork">
+      <nav class="portfolio__selectWork selectWork" id="selectWork">
         <button class="selectWork_item">all</button>
         <button class="selectWork_item">web design</button>
         <button class="selectWork_item">graphic design</button>
         <button class="selectWork_item">artwork</button>
       </nav>
       <div class="portfolio__projects" id="projects">
-        <div class="projects__item projects__item1"><img class="image_project_1"
-            src="./assets/img/projects/image-01.png" alt="work">
+        <div class="projects__item" id="project_1"><img class="image_project_1" src="./assets/img/projects/image-01.png"
+            alt="work">
         </div>
-        <div class="projects__item"><img class="image_project_2" src="./assets/img/projects/image-02.png" alt="work">
+        <div class="projects__item" id="project_2"><img class="image_project_2" src="./assets/img/projects/image-02.png"
+            alt="work">
         </div>
-        <div class="projects__item"><img class="image_project_3" src="./assets/img/projects/image-03.png" alt="work">
+        <div class="projects__item" id="project_3"><img class="image_project_3" src="./assets/img/projects/image-03.png"
+            alt="work">
         </div>
-        <div class="projects__item"><img class="image_project_4" src="./assets/img/projects/image-04.png" alt="work">
+        <div class="projects__item" id="project_4"><img class="image_project_4" src="./assets/img/projects/image-04.png"
+            alt="work">
         </div>
-        <div class="projects__item"><img class="image_project_5" src="./assets/img/projects/image-05.png" alt="work">
+        <div class="projects__item" id="project_5"><img class="image_project_5" src="./assets/img/projects/image-05.png"
+            alt="work">
         </div>
-        <div class="projects__item"><img class="image_project_6" src="./assets/img/projects/image-06.png" alt="work">
+        <div class="projects__item" id="project_6"><img class="image_project_6" src="./assets/img/projects/image-06.png"
+            alt="work">
         </div>
-        <div class="projects__item"><img class="image_project_7" src="./assets/img/projects/image-07.png" alt="work">
+        <div class="projects__item" id="project_7"><img class="image_project_7" src="./assets/img/projects/image-07.png"
+            alt="work">
         </div>
-        <div class="projects__item"><img class="image_project_8" src="./assets/img/projects/image-08.png" alt="work">
+        <div class="projects__item" id="project_8"><img class="image_project_8" src="./assets/img/projects/image-08.png"
+            alt="work">
         </div>
-        <div class="projects__item"><img class="image_project_9" src="./assets/img/projects/image-09.png" alt="work">
+        <div class="projects__item" id="project_9"><img class="image_project_9" src="./assets/img/projects/image-09.png"
+            alt="work">
         </div>
-        <div class="projects__item"><img class="image_project_10" src="./assets/img/projects/image-10.png" alt="work">
+        <div class="projects__item" id="project_10"><img class="image_project_10"
+            src="./assets/img/projects/image-10.png" alt="work">
         </div>
-        <div class="projects__item"><img class="image_project_11" src="./assets/img/projects/image-11.png" alt="work">
+        <div class="projects__item" id="project_11"><img class="image_project_11"
+            src="./assets/img/projects/image-11.png" alt="work">
         </div>
-        <div class="projects__item"><img class="image_project_12" src="./assets/img/projects/image-12.png" alt="work">
+        <div class="projects__item" id="project_12"><img class="image_project_12"
+            src="./assets/img/projects/image-12.png" alt="work">
         </div>
       </div>
     </section>

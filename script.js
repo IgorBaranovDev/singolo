@@ -8,6 +8,7 @@ const iphoneHorizontButton = document.getElementById(
 const iphoneVertical = document.getElementById('iphone-vertical');
 const iphoneVerticalButton = document.getElementById('button-vertical-iphone');
 const projects = document.getElementById('projects');
+const menuSelectWorks = document.getElementById('selectWork');
 
 navigationLinks.addEventListener('click', event => {
   navigationLinks
@@ -37,8 +38,27 @@ iphoneVerticalButton.addEventListener('click', () => {
 });
 
 projects.addEventListener('click', () => {
-  projects
-    .querySelectorAll('div')
-    .forEach(element => element.classList.remove('item-active'));
-  event.path[1].classList.add('item-active');
+  if (event.target.tagName === 'IMG') {
+    projects
+      .querySelectorAll('div')
+      .forEach(element => element.classList.remove('item-active'));
+    event.path[1].classList.add('item-active');
+  }
+});
+
+menuSelectWorks.addEventListener('click', () => {
+  if (event.target.className === 'selectWork_item') {
+    menuSelectWorks
+      .querySelectorAll('button')
+      .forEach(element => element.classList.remove('selectWork_item_active'));
+    event.target.classList.add('selectWork_item_active');
+    projects
+      .querySelectorAll('div')
+      .forEach(
+        element =>
+          (element.style = `order: ${Math.floor(
+            1 + Math.random() * (12 + 1 - 1)
+          )}`)
+      );
+  }
 });
