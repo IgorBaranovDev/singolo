@@ -16,7 +16,8 @@ body {
 }
 
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,6 +25,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  z-index: 333;
 }
 
 .header_theme {
@@ -121,8 +123,7 @@ body {
 }
 
 .header_link_active {
-  color: #dcdd78;
-  font-size: 14px;
+  color: #f06c64;
 }
 
 .main_theme,
