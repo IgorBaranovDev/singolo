@@ -7,8 +7,21 @@ const iphoneHorizontButton = document.getElementById(
 );
 const iphoneVertical = document.getElementById('iphone-vertical');
 const iphoneVerticalButton = document.getElementById('button-vertical-iphone');
+const iphoneVerticalCenter = document.getElementById('iphone-vertical-center');
+const iphoneVerticalCenterButton = document.getElementById(
+  'button-vertical-iphone-center'
+);
 const projects = document.getElementById('projects');
 const menuSelectWorks = document.getElementById('selectWork');
+const inputNameUser = document.getElementById('form_name_user');
+const iputEmailUser = document.getElementById('form_email_user');
+const inputSubjectUser = document.getElementById('form_subject');
+const inputDescribeUser = document.getElementById('form_describe');
+const formSubmit = document.getElementById('form__submit');
+const modalWindow = document.getElementById('pop_up');
+const popUpTopic = document.getElementById('pop_up__topic');
+const popUpDescribe = document.getElementById('pop_up__describe');
+const popUpButtonClose = document.getElementById('pop_up_close');
 
 navigationLinks.addEventListener('click', event => {
   navigationLinks
@@ -29,12 +42,22 @@ iphoneVertical.addEventListener('click', event => {
   }
 });
 
+iphoneVerticalCenter.addEventListener('click', event => {
+  if (event.target.className === 'iphone_vertical_bg-img') {
+    event.target.style = 'z-index: 2';
+  }
+});
+
 iphoneHorizontButton.addEventListener('click', () => {
   iphoneHorizont.children[2].style = 'z-index: 3';
 });
 
 iphoneVerticalButton.addEventListener('click', () => {
   iphoneVertical.children[2].style = 'z-index: 3';
+});
+
+iphoneVerticalCenterButton.addEventListener('click', () => {
+  iphoneVerticalCenter.children[2].style = 'z-index: 3';
 });
 
 projects.addEventListener('click', () => {
@@ -62,3 +85,54 @@ menuSelectWorks.addEventListener('click', () => {
       );
   }
 });
+
+formSubmit.addEventListener('click', () => {
+  if (inputNameUser.value === '' || iputEmailUser.value === '') {
+    return false;
+  } else {
+    if (inputSubjectUser.value === '') {
+      popUpTopic.innerText = 'not topics';
+    } else {
+      popUpTopic.innerText = inputSubjectUser.value.toString();
+    }
+    if (inputDescribeUser.value === '') {
+      popUpDescribe.innerText = 'no description';
+    } else {
+      popUpDescribe.innerText = inputDescribeUser.value.toString();
+    }
+    modalWindow.style = 'display: block;';
+  }
+});
+
+popUpButtonClose.addEventListener('click', () => {
+  modalWindow.style = 'display: none;';
+});
+
+//slider
+const slides = document.getElementsByClassName('slider__item');
+const leftArrow = document.getElementById('left-arrow');
+const rightArrow = document.getElementById('right-arrow');
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+rightArrow.addEventListener('click', () => {
+  showSlides((slideIndex += 1));
+});
+
+leftArrow.addEventListener('click', () => {
+  showSlides((slideIndex -= 1));
+});
+
+function showSlides(n) {
+  let i;
+  if (n > slides.length) {
+    slideIndex = 1;
+  } else if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+  slides[slideIndex - 1].style.display = 'block';
+}
