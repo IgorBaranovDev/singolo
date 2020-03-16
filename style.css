@@ -194,28 +194,48 @@ body {
   background-color: #648bf0;
 }
 
-.slider .slider__item {
+.slider__anim_left {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
-  animation-name: fade;
+  animation-name: fade_left;
   -webkit-animation-duration: 2.5s;
-  animation-duration: 2.5s;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+  animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 }
 
-@-webkit-keyframes fade {
+.slider__anim_right {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade_right;
+  -webkit-animation-duration: 2.5s;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+  animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+}
+
+@keyframes fade_right {
   from {
-    opacity: 0.4;
+    opacity: 0.2;
+    margin-left: -100%;
+    width: 300%;
   }
   to {
     opacity: 1;
+    margin-left: 0%;
+    width: 100%;
   }
 }
 
-@keyframes fade {
+@keyframes fade_left {
   from {
-    opacity: 0.4;
+    opacity: 0.2;
+    margin-left: 100%;
+    width: 300%;
   }
   to {
+    margin-left: 0%;
+    width: 100%;
     opacity: 1;
   }
 }

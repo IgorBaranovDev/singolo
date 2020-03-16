@@ -108,31 +108,37 @@ popUpButtonClose.addEventListener('click', () => {
   modalWindow.style = 'display: none;';
 });
 
-//slider
 const slides = document.getElementsByClassName('slider__item');
 const leftArrow = document.getElementById('left-arrow');
 const rightArrow = document.getElementById('right-arrow');
 
 let slideIndex = 1;
-showSlides(slideIndex);
+// showSlides(slideIndex);
 
 rightArrow.addEventListener('click', () => {
-  showSlides((slideIndex += 1));
+  showSlides((slideIndex += 1), 'right');
 });
 
 leftArrow.addEventListener('click', () => {
-  showSlides((slideIndex -= 1));
+  showSlides((slideIndex -= 1), 'left');
 });
 
-function showSlides(n) {
-  let i;
+function showSlides(n, direction) {
   if (n > slides.length) {
     slideIndex = 1;
   } else if (n < 1) {
     slideIndex = slides.length;
   }
-  for (i = 0; i < slides.length; i++) {
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove('slider__anim_left');
+    slides[i].classList.remove('slider__anim_right');
     slides[i].style.display = 'none';
   }
-  slides[slideIndex - 1].style.display = 'block';
+  if (direction === 'left') {
+    slides[slideIndex - 1].style.display = 'block';
+    slides[slideIndex - 1].classList.add('slider__anim_left');
+  } else if (direction === 'right') {
+    slides[slideIndex - 1].classList.add('slider__anim_right');
+    slides[slideIndex - 1].style.display = 'block';
+  }
 }
