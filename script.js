@@ -5,12 +5,9 @@ function onScroll() {
   const curPos = window.scrollY;
   const sections = document.querySelectorAll('#main > section');
   const links = document.querySelectorAll('#navigation-links li a');
-  console.log(curPos);
 
   sections.forEach(el => {
-    console.log(el.offsetTop + ' <= ' + curPos);
     el.getAttribute('id');
-
     if (
       el.offsetTop <= curPos + 122 &&
       el.offsetTop + el.offsetHeight > curPos
@@ -113,8 +110,13 @@ const popUpDescribe = document.getElementById('pop_up__describe');
 const popUpButtonClose = document.getElementById('pop_up_close');
 
 formSubmit.addEventListener('click', e => {
-  e.preventDefault();
-  if (inputNameUser.value === '' || iputEmailUser.value === '') {
+  // e.preventDefault();
+  if (
+    inputNameUser.value === '' ||
+    iputEmailUser.value === '' ||
+    !iputEmailUser.validity.valid ||
+    !inputNameUser.validity.valid
+  ) {
     return false;
   } else {
     if (inputSubjectUser.value === '') {
@@ -132,6 +134,9 @@ formSubmit.addEventListener('click', e => {
 });
 
 popUpButtonClose.addEventListener('click', () => {
+  document.querySelectorAll('#form > *:not(:last-child)').forEach(el => {
+    el.value = '';
+  });
   modalWindow.style = 'display: none;';
 });
 
