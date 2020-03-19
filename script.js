@@ -1,6 +1,34 @@
-const navigationLinks = document.getElementById('navigation-links');
-const leftArrowOfslider = document.getElementById('left-arrow');
-const rightArrowOfslider = document.getElementById('right-arrow');
+// heder nav
+document.addEventListener('scroll', onScroll);
+
+function onScroll() {
+  const curPos = window.scrollY;
+  const sections = document.querySelectorAll('#main > section');
+  const links = document.querySelectorAll('#navigation-links li a');
+  console.log(curPos);
+
+  sections.forEach(el => {
+    console.log(el.offsetTop + ' <= ' + curPos);
+    el.getAttribute('id');
+
+    if (
+      el.offsetTop <= curPos + 122 &&
+      el.offsetTop + el.offsetHeight > curPos
+    ) {
+      links.forEach(element => {
+        element.classList.remove('header_link_active');
+        if (
+          el.getAttribute('id') === element.getAttribute('href').substring(1)
+        ) {
+          element.classList.add('header_link_active');
+        }
+      });
+    }
+  });
+}
+
+// on/off bg phones
+
 const iphoneHorizont = document.getElementById('iphone-horizont');
 const iphoneHorizontButton = document.getElementById(
   'button-gorizontal-iphone'
@@ -11,24 +39,6 @@ const iphoneVerticalCenter = document.getElementById('iphone-vertical-center');
 const iphoneVerticalCenterButton = document.getElementById(
   'button-vertical-iphone-center'
 );
-const projects = document.getElementById('projects');
-const menuSelectWorks = document.getElementById('selectWork');
-const inputNameUser = document.getElementById('form_name_user');
-const iputEmailUser = document.getElementById('form_email_user');
-const inputSubjectUser = document.getElementById('form_subject');
-const inputDescribeUser = document.getElementById('form_describe');
-const formSubmit = document.getElementById('form__submit');
-const modalWindow = document.getElementById('pop_up');
-const popUpTopic = document.getElementById('pop_up__topic');
-const popUpDescribe = document.getElementById('pop_up__describe');
-const popUpButtonClose = document.getElementById('pop_up_close');
-
-navigationLinks.addEventListener('click', event => {
-  navigationLinks
-    .querySelectorAll('a')
-    .forEach(element => element.classList.remove('header_link_active'));
-  event.target.classList.add('header_link_active');
-});
 
 iphoneHorizont.addEventListener('click', event => {
   if (event.target.className === 'iphone_gorizontal_bg-img') {
@@ -60,6 +70,10 @@ iphoneVerticalCenterButton.addEventListener('click', () => {
   iphoneVerticalCenter.children[2].style = 'z-index: 3';
 });
 
+// feat. section portfolio
+const projects = document.getElementById('projects');
+const menuSelectWorks = document.getElementById('selectWork');
+
 projects.addEventListener('click', () => {
   if (event.target.tagName === 'IMG') {
     projects
@@ -86,7 +100,20 @@ menuSelectWorks.addEventListener('click', () => {
   }
 });
 
-formSubmit.addEventListener('click', () => {
+// pop-up-window
+
+const inputNameUser = document.getElementById('form_name_user');
+const iputEmailUser = document.getElementById('form_email_user');
+const inputSubjectUser = document.getElementById('form_subject');
+const inputDescribeUser = document.getElementById('form_describe');
+const formSubmit = document.getElementById('form__submit');
+const modalWindow = document.getElementById('pop_up');
+const popUpTopic = document.getElementById('pop_up__topic');
+const popUpDescribe = document.getElementById('pop_up__describe');
+const popUpButtonClose = document.getElementById('pop_up_close');
+
+formSubmit.addEventListener('click', e => {
+  e.preventDefault();
   if (inputNameUser.value === '' || iputEmailUser.value === '') {
     return false;
   } else {
@@ -108,12 +135,13 @@ popUpButtonClose.addEventListener('click', () => {
   modalWindow.style = 'display: none;';
 });
 
+// slider
+
 const slides = document.getElementsByClassName('slider__item');
 const leftArrow = document.getElementById('left-arrow');
 const rightArrow = document.getElementById('right-arrow');
 
 let slideIndex = 1;
-// showSlides(slideIndex);
 
 rightArrow.addEventListener('click', () => {
   showSlides((slideIndex += 1), 'right');
