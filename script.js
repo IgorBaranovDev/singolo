@@ -34,7 +34,7 @@ const iphoneVertical = document.getElementById('iphone-vertical');
 const iphoneVerticalButton = document.getElementById('button-vertical-iphone');
 const iphoneVerticalCenter = document.getElementById('iphone-vertical-center');
 const iphoneVerticalCenterButton = document.getElementById(
-  'button-vertical-iphone-center'
+  'iphone_vertical_center_button'
 );
 
 iphoneHorizont.addEventListener('click', event => {
@@ -50,7 +50,7 @@ iphoneVertical.addEventListener('click', event => {
 });
 
 iphoneVerticalCenter.addEventListener('click', event => {
-  if (event.target.className === 'iphone_vertical_bg-img') {
+  if (event.target.className === 'iphone_vertical_center_bg-img') {
     event.target.style = 'z-index: 2';
   }
 });

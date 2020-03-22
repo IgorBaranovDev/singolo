@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 html {
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -47,20 +49,19 @@ body {
 
 .header__navigation {
   width: 80%;
-  margin-top: 22px;
+  margin-top: 2%;
 }
 
 .logo__header-link {
-  margin-left: 40px;
+  margin-left: 19%;
 }
 
 .header-link {
-  font-size: 25px;
+  font-size: 0.8em;
   font-family: 'Lato-Bold', sans-serif;
   font-style: normal;
   text-transform: uppercase;
   text-decoration: none;
-  line-height: 0.253;
   letter-spacing: -0.02em;
   color: rgb(255, 255, 255);
 }
@@ -88,7 +89,7 @@ body {
 
 .navigation__item {
   position: relative;
-  margin: 0 15px 0;
+  margin: 0 1.9% 0;
 }
 
 .navigation__item .header_link {
@@ -96,26 +97,25 @@ body {
 }
 
 .header_link-theme {
-  font-size: 12px;
+  font-size: 0.75em;
   text-decoration: none;
   text-transform: uppercase;
   font-family: 'Lato-Bold', sans-serif;
-  line-height: 0.527;
   color: #f1f1f2;
 }
 
 .navigation__item:nth-child(3) {
-  margin: 0 13px 0;
+  margin: 0 1.7% 0;
 }
 
 .navigation__item:last-child {
-  margin-right: 38px;
+  margin-right: 5%;
 }
 
 .navigation__item:not(:first-child)::after {
   content: '';
   position: absolute;
-  left: -16px;
+  left: -26%;
   top: 56%;
   width: 3px;
   height: 3px;
@@ -166,12 +166,12 @@ body {
 
 .arrow_theme_left {
   top: 47%;
-  left: 37px;
+  left: 3.5%;
 }
 
 .arrow_theme_right {
   top: 47%;
-  right: 33px;
+  right: 3.5%;
 }
 
 .arrow:hover {
@@ -183,8 +183,7 @@ body {
 
 .slider__item {
   position: relative;
-  height: 594px;
-  width: 100%;
+  height: 100%;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 100%;
   flex: 0 0 100%;
@@ -202,9 +201,12 @@ body {
 .slider__anim_left {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
+  -webkit-animation-name: fade_left;
   animation-name: fade_left;
   -webkit-animation-duration: 2.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
   /* animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1); */
 }
@@ -212,11 +214,27 @@ body {
 .slider__anim_right {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
+  -webkit-animation-name: fade_right;
   animation-name: fade_right;
   -webkit-animation-duration: 2.5s;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
   /* animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1); */
+}
+
+@-webkit-keyframes fade_right {
+  from {
+    opacity: 0.2;
+    margin-left: -100%;
+    width: 300%;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 @keyframes fade_right {
@@ -229,6 +247,19 @@ body {
     opacity: 1;
     margin-left: 0%;
     width: 100%;
+  }
+}
+
+@-webkit-keyframes fade_left {
+  from {
+    opacity: 0.2;
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+    opacity: 1;
   }
 }
 
@@ -245,103 +276,140 @@ body {
   }
 }
 
-.iphone_gorizontal {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-}
-
 .iphone_vertical {
   position: absolute;
-  top: 52px;
-  left: 112px;
-}
-
-.iphone_vertical_left {
-  position: absolute;
-  top: 150px;
-  left: 252px;
-  -webkit-transform: scale(0.65);
-  -ms-transform: scale(0.65);
-  transform: scale(0.65);
-}
-
-.iphone_vertical_centr {
-  position: absolute;
-  top: 33px;
-  left: 380px;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.iphone_vertical_right {
-  position: absolute;
-  top: 150px;
-  left: 612px;
-  -webkit-transform: scale(0.65);
-  -ms-transform: scale(0.65);
-  transform: scale(0.65);
+  top: 8.8%;
+  left: 11%;
+  width: 21.2%;
+  height: 77%;
 }
 
 .iphone_vertical_base {
   position: absolute;
-  right: -240px;
-  top: 1px;
   z-index: 2;
+  width: 111%;
 }
 
 .iphone_vertical_base_bg-black {
   position: absolute;
-  right: -205px;
-  top: 62px;
+  right: 5%;
+  top: 13.5%;
+  width: 90%;
   z-index: 3;
 }
 
 .iphone_vertical_bg-img {
   cursor: pointer;
   position: absolute;
-  right: -205px;
-  top: 62px;
+  right: 5%;
+  top: 13.5%;
+  width: 90%;
   z-index: 5;
 }
 
-.iphone_vertical_batton {
+.iphone_vertical_button {
   cursor: pointer;
   position: absolute;
-  right: -129px;
-  top: 408px;
+  right: 40%;
+  top: 89%;
+  width: 20%;
   z-index: 5;
+}
+
+.iphone_gorizontal {
+  position: absolute;
+  top: 29%;
+  right: 13.4%;
+  width: 45%;
+  height: 36.5%;
 }
 
 .iphone_gorizontal_base {
   position: absolute;
-  right: 111px;
-  top: 174px;
   z-index: 2;
+  width: 106%;
 }
 
 .iphone_gorizontal_base_bg-black {
   position: absolute;
-  right: 199px;
-  top: 185px;
+  right: 13.5%;
+  top: 5%;
+  width: 74%;
   z-index: 3;
 }
 
 .iphone_gorizontal_bg-img {
   cursor: pointer;
   position: absolute;
-  right: 199px;
-  top: 185px;
+  right: 13.5%;
+  top: 5%;
+  width: 74%;
   z-index: 5;
 }
 
-.iphone_gorizontal_batton {
+.iphone_gorizontal_button {
   cursor: pointer;
   position: absolute;
-  right: 544px;
-  top: 260px;
+  top: 39.5%;
+  left: 2.5%;
+  width: 2%;
   z-index: 5;
+}
+
+.iphone_vertical_left {
+  position: absolute;
+  opacity: 0.5;
+  position: absolute;
+  top: 11%;
+  height: 82%;
+  width: 24%;
+  left: 20.5%;
+  -webkit-transform: scale(0.65);
+  -ms-transform: scale(0.65);
+  transform: scale(0.65);
+}
+
+.iphone_vertical_center {
+  position: absolute;
+  top: 10%;
+  left: 38.4%;
+  height: 81%;
+  width: 24%;
+  -webkit-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+  transform: scale(1.06);
+}
+
+.iphone_vertical_center_base {
+  position: absolute;
+  z-index: 2;
+}
+
+.iphone_vertical_center_base_bg-black {
+  position: absolute;
+  right: 16.5%;
+  top: 12.5%;
+  z-index: 3;
+}
+
+.iphone_vertical_center_bg-img {
+  cursor: pointer;
+  position: absolute;
+  right: 16.5%;
+  top: 12.5%;
+  z-index: 5;
+}
+
+.iphone_vertical_right {
+  opacity: 0.5;
+  position: absolute;
+  top: 11%;
+  right: 20%;
+  height: 82%;
+  width: 24%;
+  -webkit-transform: scale(0.65);
+  -ms-transform: scale(0.65);
+  transform: scale(0.65);
 }
 
 .services {
@@ -1134,15 +1202,36 @@ input:invalid:not(:placeholder-shown) {
 }
 
 @media screen and (max-width: 768px) {
+  .logo__header-link {
+    margin-left: 25%;
+  }
+
   .header_theme {
     max-width: 768px;
   }
 
   .header__navigation {
-    margin-top: 20px;
+    margin-top: 2.5%;
   }
+
   .navigation__item {
     letter-spacing: 0.09px;
+  }
+
+  .navigation__item {
+    margin: 0 2.5% 0;
+  }
+
+  .navigation__item:nth-child(3) {
+    margin: 0px 2.4% 0;
+  }
+
+  .navigation__item:last-child {
+    margin-right: 7%;
+  }
+
+  .navigation__item:not(:first-child)::after {
+    background: #ffffff;
   }
 
   .main_theme,
@@ -1152,68 +1241,15 @@ input:invalid:not(:placeholder-shown) {
 
   .slider,
   .slider-item {
-    height: 446px;
+    height: 447px;
+    border-bottom: 4.5px solid #ea676b;
   }
 
   .arrow_theme_left {
-    top: 48%;
-    left: 25px;
+    left: 3%;
   }
+
   .arrow_theme_right {
-    top: 48%;
-    right: 20px;
-  }
-
-  .iphone_vertical {
-    top: 40px;
-    left: 264px;
-  }
-
-  .iphone_vertical_base {
-    right: 0px;
-    height: 363px;
-    width: 180px;
-  }
-
-  .iphone_vertical_base_bg-black {
-    top: 48px;
-    right: 26px;
-    height: 254px;
-    width: 144px;
-  }
-
-  .iphone_vertical_bg-img {
-    top: 48px;
-    right: 26px;
-    height: 254px;
-    width: 144px;
-  }
-
-  .iphone_vertical_batton {
-    top: 306px;
-    right: 81px;
-    z-index: 5;
-    height: 34px;
-  }
-
-  .iphone_gorizontal_base {
-    right: 84px;
-    top: 135px;
-    height: 180px;
-    width: 363px;
-  }
-
-  .iphone_gorizontal_base_bg-black {
-    right: 150px;
-    top: 142px;
-    height: 146px;
-    width: 254px;
-  }
-
-  .iphone_gorizontal_bg-img {
-    right: 150px;
-    top: 142px;
-    height: 146px;
-    width: 254px;
+    right: 3%;
   }
 }
