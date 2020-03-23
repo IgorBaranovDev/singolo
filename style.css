@@ -310,8 +310,8 @@ body {
 .iphone_vertical_button {
   cursor: pointer;
   position: absolute;
-  right: 40%;
-  top: 89%;
+  right: 46%;
+  top: 84%;
   width: 20%;
   z-index: 5;
 }
@@ -360,10 +360,10 @@ body {
   position: absolute;
   opacity: 0.5;
   position: absolute;
-  top: 11%;
-  height: 82%;
-  width: 24%;
-  left: 20.5%;
+  top: 13%;
+  height: 73%;
+  width: 21%;
+  left: 21%;
   -webkit-transform: scale(0.65);
   -ms-transform: scale(0.65);
   transform: scale(0.65);
@@ -403,13 +403,22 @@ body {
 .iphone_vertical_right {
   opacity: 0.5;
   position: absolute;
-  top: 11%;
-  right: 20%;
-  height: 82%;
-  width: 24%;
+  top: 13%;
+  right: 22.5%;
+  height: 73%;
+  width: 21%;
   -webkit-transform: scale(0.65);
   -ms-transform: scale(0.65);
   transform: scale(0.65);
+}
+
+.iphone_vertical_batton {
+  cursor: pointer;
+  position: absolute;
+  right: 40%;
+  top: 93%;
+  width: 20%;
+  z-index: 5;
 }
 
 .services {
@@ -621,8 +630,9 @@ body {
 }
 
 .item-active {
-  width: 210px;
-  height: 177px;
+  /* width: 210px; */
+  /* height: 177px; */
+  box-sizing: border-box;
   border: 5px solid #f06c64;
 }
 
@@ -1201,7 +1211,7 @@ input:invalid:not(:placeholder-shown) {
   transform: scale(1.1);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1019px) {
   .logo__header-link {
     margin-left: 25%;
   }
@@ -1251,5 +1261,244 @@ input:invalid:not(:placeholder-shown) {
 
   .arrow_theme_right {
     right: 3%;
+  }
+
+  .iphone_vertical_center_base {
+    width: 100%;
+  }
+
+  .iphone_vertical_center_base_bg-black,
+  .iphone_vertical_center_bg-img {
+    width: 78%;
+  }
+
+  .iphone_vertical_button {
+    right: 44.5%;
+    top: 86%;
+  }
+
+  .services {
+    width: 100%;
+    border-bottom: 4.52px solid #ffffff;
+    height: 671px;
+  }
+  .services__title {
+    margin-left: 40px;
+    margin-top: 40px;
+  }
+
+  .sevices__cards {
+    justify-content: space-between;
+    padding: 0px 29px;
+  }
+  .cards__item {
+    width: 335px;
+    height: 143px;
+  }
+
+  .item__image .image__centre {
+    left: 0px;
+    top: 37px;
+  }
+
+  .item__description {
+    left: 80px;
+    top: 17px;
+  }
+
+  .description__text {
+    margin-top: -8px;
+  }
+  .portfolio {
+    border-bottom: 7.6px solid #323746;
+  }
+
+  .portfolio__selectWork {
+    margin: 10px 37px 15px;
+  }
+
+  .portfolio__projects {
+    margin: 0px 30px 53px;
+  }
+
+  .portfolio__text {
+    font-size: 18px;
+    line-height: 30px;
+    line-height: 1.5em;
+    margin: 27px 40px 16px;
+    padding-right: 45px;
+  }
+
+  .projects__item {
+    position: relative;
+    overflow: hidden;
+    height: 184px;
+    width: 100%;
+    margin: 10px;
+    flex: 1 0 23%;
+  }
+
+  .projects__item .item-active {
+    width: 210px;
+    height: 177px;
+    border: 5px solid #f06c64;
+  }
+
+  .projects__item::before {
+    content: '';
+    float: left;
+    padding-top: 100%;
+  }
+
+  .main__about_as {
+    min-height: 670px;
+  }
+
+  .about_as {
+    border: none;
+  }
+
+  .title_about_as {
+    margin-top: 62px;
+  }
+
+  .card {
+    height: 360px;
+    width: 216px;
+    margin: 35px 9px;
+  }
+
+  .cards img {
+    width: 100%;
+  }
+
+  .card_name {
+    margin-top: 8px;
+  }
+
+  .card_bio {
+    margin: 0;
+    line-height: 23px;
+  }
+
+  .social_link {
+    margin: 9px 1px;
+  }
+
+  .get-a-quote {
+    border-bottom: 5.79px solid #ea676b;
+  }
+
+  .main__get-a-quote {
+    min-height: 623px;
+  }
+
+  .get-a-quote__title_header {
+    margin-left: 43px;
+    margin-top: 63px;
+  }
+
+  .get-a-quote__text {
+    padding-right: 16px;
+  }
+
+  .get-a-quote__contact-information {
+    margin: 23px 40px;
+  }
+
+  .contact-information__form {
+    width: 440px;
+    margin-left: 0;
+  }
+
+  .contact-information__contacts {
+    width: 220px;
+    margin-right: 0;
+  }
+
+  .form__input_name,
+  .form__input_email,
+  .form__input_subject {
+    height: 16px;
+    margin-bottom: 12px;
+    padding: 10px 8px;
+  }
+
+  .form__textarea {
+    height: 143px;
+    padding: 8px 8px;
+  }
+
+  .form__submit {
+    width: 30%;
+    left: 0;
+    top: 326px;
+    padding: 12px 46px;
+  }
+
+  .contacts_info {
+    margin-top: 0px;
+    line-height: 22px;
+    text-align: justify;
+  }
+
+  .contacts_links {
+    margin-top: -3px;
+    margin-left: 2px;
+  }
+
+  .contacts_links > * {
+    padding-left: 24px;
+  }
+
+  .footer__copyright {
+    font-size: 13px;
+    margin-left: 40px;
+    margin-top: 19px;
+  }
+
+  .footer__social_links {
+    margin-right: 41px;
+    margin-top: 7px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo__header-link {
+  }
+
+  .header_theme {
+  }
+
+  .header__navigation {
+  }
+
+  .navigation__item {
+  }
+
+  .navigation__item {
+  }
+
+  .navigation__item:nth-child(3) {
+  }
+
+  .navigation__item:last-child {
+  }
+
+  .navigation__item:not(:first-child)::after {
+  }
+
+  .main_theme,
+  .footer_theme {
+  }
+
+  .slider,
+  .slider-item {
+  }
+
+  .arrow_theme_left {
+  }
+
+  .arrow_theme_right {
   }
 }
