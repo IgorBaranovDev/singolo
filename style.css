@@ -75,6 +75,16 @@ body {
   cursor: pointer;
 }
 
+.header__menu-for-mobile {
+  display: none;
+}
+
+.header__menu-for-mobile-active {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
 .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -310,6 +320,15 @@ body {
 .iphone_vertical_button {
   cursor: pointer;
   position: absolute;
+  right: 40%;
+  top: 89%;
+  width: 20%;
+  z-index: 5;
+}
+
+.iphone_vertical_center_button {
+  cursor: pointer;
+  position: absolute;
   right: 46%;
   top: 84%;
   width: 20%;
@@ -350,9 +369,9 @@ body {
 .iphone_gorizontal_button {
   cursor: pointer;
   position: absolute;
-  top: 39.5%;
-  left: 2.5%;
-  width: 2%;
+  top: 38.5%;
+  left: 1.5%;
+  width: 10%;
   z-index: 5;
 }
 
@@ -630,8 +649,7 @@ body {
 }
 
 .item-active {
-  /* width: 210px; */
-  /* height: 177px; */
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 5px solid #f06c64;
 }
@@ -1037,6 +1055,7 @@ body {
   border: 2px solid #f06c64;
   padding: 5px;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .pop_up__describe {
@@ -1273,8 +1292,8 @@ input:invalid:not(:placeholder-shown) {
   }
 
   .iphone_vertical_button {
-    right: 44.5%;
-    top: 86%;
+    right: 39.5%;
+    top: 89%;
   }
 
   .services {
@@ -1288,6 +1307,8 @@ input:invalid:not(:placeholder-shown) {
   }
 
   .sevices__cards {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0px 29px;
   }
@@ -1335,6 +1356,8 @@ input:invalid:not(:placeholder-shown) {
     height: 184px;
     width: 100%;
     margin: 10px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 23%;
     flex: 1 0 23%;
   }
 
@@ -1464,41 +1487,329 @@ input:invalid:not(:placeholder-shown) {
 }
 
 @media screen and (max-width: 767px) {
+  .header__menu-for-mobile {
+    display: block;
+  }
+
+  .header__logo {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+
   .logo__header-link {
+    margin-left: 3%;
+    margin-top: 3%;
+  }
+
+  .header-link {
+    font-size: 0.6em;
   }
 
   .header_theme {
+    max-width: 375px;
+    height: 67px;
+    border-bottom: 3.5px solid #313645;
   }
 
   .header__navigation {
+    display: none;
   }
 
-  .navigation__item {
+  .header__menu-for-mobile {
+    display: block;
+    position: absolute;
+    width: 26px;
+    height: 25px;
+    left: 20px;
+    top: 21px;
+    z-index: 6;
   }
 
-  .navigation__item {
+  .header__menu-for-mobile span:nth-child(1) {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    height: 2px;
+    width: 25px;
+    background: antiquewhite;
   }
 
-  .navigation__item:nth-child(3) {
+  .header__menu-for-mobile span:nth-child(2) {
+    position: absolute;
+    left: 0;
+    top: 14px;
+    height: 2px;
+    width: 25px;
+    background: antiquewhite;
   }
 
-  .navigation__item:last-child {
-  }
-
-  .navigation__item:not(:first-child)::after {
+  .header__menu-for-mobile span:nth-child(3) {
+    position: absolute;
+    left: 0;
+    top: 24px;
+    height: 2px;
+    width: 25px;
+    background: antiquewhite;
   }
 
   .main_theme,
   .footer_theme {
+    max-width: 375px;
   }
 
   .slider,
   .slider-item {
+    height: 218px;
+    border-bottom: 2.2px solid #ea676b;
   }
 
   .arrow_theme_left {
+    top: 45%;
+    left: 1%;
   }
 
   .arrow_theme_right {
+    top: 45%;
+    right: 1%;
+  }
+
+  .iphone_vertical {
+    position: absolute;
+    top: 9.8%;
+  }
+
+  .iphone_vertical_button {
+    right: 39%;
+    top: 88%;
+  }
+
+  .iphone_gorizontal {
+    position: absolute;
+    top: 30.5%;
+  }
+
+  .iphone_vertical_center > .iphone_vertical_button {
+    right: 44%;
+    top: 85%;
+  }
+
+  .services {
+    border: none;
+    height: 1034px;
+  }
+
+  .services__title {
+    margin-left: 31px;
+    margin-top: 26px;
+  }
+
+  .text_theme {
+    text-align: left;
+  }
+
+  .services__text {
+    margin: 0px 33px;
+  }
+
+  .cards__item {
+    width: 326px;
+    height: 119px;
+  }
+  .item__image .image__centre {
+    left: -5px;
+    top: 31px;
+  }
+  .item__description {
+    left: 74px;
+    top: 10px;
+  }
+  .description__text {
+    margin-top: -11px;
+  }
+
+  .main__portfolio {
+    min-height: 844px;
+  }
+
+  .portfolio {
+    border: none;
+  }
+
+  .portfolio__title_header,
+  .about_as__title_about_as {
+    margin-left: 28px;
+    margin-top: 52px;
+    color: #666d88;
+  }
+
+  .portfolio__text {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 27px 31px 14px;
+    padding-right: 8px;
+  }
+
+  .portfolio__selectWork {
+    margin: 10px 25px 0px;
+  }
+
+  .portfolio__projects {
+    margin: 16px 22px 36px;
+  }
+
+  .projects__item {
+    position: relative;
+    overflow: hidden;
+    height: 128px;
+    width: 100%;
+    margin: 7px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 40%;
+    flex: 1 0 40%;
+  }
+
+  .portfolio__projects .projects__item:nth-child(n + 9) {
+    display: none;
+  }
+
+  .about_as__title_about_as {
+    margin-left: 30px;
+    margin-top: 41px;
+    color: #666d88;
+  }
+
+  .about_as__text {
+    margin-left: 29px;
+    margin-bottom: 19px;
+    padding-right: 34px;
+  }
+
+  .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 28px;
+  }
+
+  .card {
+    height: 440px;
+    width: 314px;
+    margin: 17px auto;
+  }
+
+  .card_name {
+    margin-top: 11px;
+  }
+
+  .social_link {
+    margin: 11px 1px;
+  }
+
+  .about_as__text {
+    margin-bottom: 9px;
+  }
+
+  .get-a-quote__title_header {
+    margin-left: 30px;
+    margin-top: 54px;
+  }
+
+  .get-a-quote__text {
+    padding-right: 12px;
+    margin: 24px 31px 5px;
+    text-align: start;
+  }
+
+  .get-a-quote__contact-information {
+    margin: 23px 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .contact-information__form {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 94px;
+  }
+
+  .form__submit {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contacts_info {
+    width: 315px;
+  }
+
+  .contacts_links {
+    margin-top: 14px;
+    margin-left: 0px;
+    margin-bottom: 22px;
+  }
+
+  .get-a-quote {
+    border: none;
+  }
+
+  .footer__copyright {
+    display: none;
+  }
+
+  .footer__social_links {
+    margin: 0px auto;
+  }
+
+  .pop_up_window {
+    width: 75%;
+  }
+
+  .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 232px;
+    margin-left: 71px;
+  }
+
+  .navigation > * {
+    margin: 15px 0;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.035em;
+  }
+
+  .navigation__item:not(:first-child)::after {
+    display: none;
+  }
+
+  .header__navigation {
+    display: none;
+    position: absolute;
+    height: 100vh;
+    background: yellowgreen;
+    margin: 0;
+    width: 278px;
+    background: #2d303a;
+    -webkit-box-shadow: 97px 0px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 97px 0px 0px rgba(0, 0, 0, 0.4);
+  }
+
+  .navigation__item:nth-child(3) {
+    margin: 15px 0;
+  }
+
+  .header__logo_mobile_active {
+    font-size: 19.6875px;
+    margin-right: 115px;
+    z-index: 5;
   }
 }

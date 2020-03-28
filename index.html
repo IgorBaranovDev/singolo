@@ -13,12 +13,12 @@
 
 <body>
   <header class="header header_theme" id="header" style="position: sticky;">
-    <div class="header__logo">
+    <div class="header__logo" id="header__logo">
       <h1 class="logo__header-link ">
         <a href="#" class="header-link" title="Singolo">singolo<span>*</span></a>
       </h1>
     </div>
-    <nav class="header__navigation">
+    <nav class="header__navigation" id="header__navigation">
       <ul class="navigation" id="navigation-links">
         <li class="navigation__item">
           <a href="#slider" class="header_link header_link-theme">home</a>
@@ -37,6 +37,11 @@
         </li>
       </ul>
     </nav>
+    <div class="header__menu-for-mobile" id="menu-for-mobile">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
   <main class="main main_theme" id="main">
     <section class="main__slider slider slider__theme" id="slider">
@@ -72,7 +77,7 @@
           <img class="iphone_vertical_center_base_bg-black" src="./assets/img/slider/iphone-vertical-bg-black.png"
             alt="bg-black">
           <img class="iphone_vertical_center_bg-img" src="./assets/img/slider/iphone-vertical-bg-img.png" alt="img">
-          <img id="iphone_vertical_center_button" class="iphone_vertical_button"
+          <img id="iphone_vertical_center_button" class="iphone_vertical_center_button"
             src="./assets/img/slider/button-iphone.png" alt="batton">
         </div>
         <div class="container__iphone iphone iphone_vertical_right">
@@ -320,6 +325,7 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <script src="navigation-mobile.js"></script>
 </body>
 
 </html>
